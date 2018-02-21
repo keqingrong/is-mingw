@@ -1,5 +1,5 @@
 'use strict';
-const fs = require('fs');
+const { execSync } = require('child_process');
 
 const isMinGW = () => {
   if (process.platform !== 'win32') {
@@ -7,7 +7,7 @@ const isMinGW = () => {
   }
 
   try {
-    return fs.readFileSync('/proc/version', 'utf8').toLowerCase.includes('mingw');
+    return execSync('uname -a', {encoding: 'utf-8'}).toLowerCase().includes('mingw');
   } catch (err) {
     return false;
   }
