@@ -16,4 +16,4 @@ const isMinGW = () => {
   }
 };
 
-module.exports = isMinGW();
+module.exports = isMinGW;

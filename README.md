@@ -15,7 +15,7 @@ npm install --save is-mingw
 ```js
 const isMinGW = require('is-mingw');
 
-console.log(isMinGW);
+console.log(isMinGW());
 ```
 
 ## License
